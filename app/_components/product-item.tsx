@@ -1,4 +1,5 @@
-"user client";
+"use client";
+
 import { Prisma } from "@prisma/client";
 import Image from "next/image";
 import { calculateProductTotalPrice, formatCurrency } from "../_helpers/price";
@@ -19,7 +20,7 @@ interface ProductItemProps {
   className?: string;
 }
 
-const ProductItem = ({ product, className}: ProductItemProps) => {
+const ProductItem = ({ product, className }: ProductItemProps) => {
   return (
     <Link
       className={cn("w-[150px] min-w-[150px]", className)}

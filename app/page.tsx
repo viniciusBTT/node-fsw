@@ -1,4 +1,3 @@
-
 import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
 import Search from "./_components/search";
@@ -48,10 +47,17 @@ const Home = async () => {
       <div className="space-y-4 pt-6">
         <div className="flex items-center justify-between px-5">
           <h2 className="font-semibold">Pedidos Recomendados</h2>
-          <Link href="/products/recommended">
+
+          <Button
+            variant="ghost"
+            className="h-fit p-0 text-primary hover:bg-transparent"
+            asChild
+          >
+            <Link href="/products/recommended">
               Ver todos
               <ChevronRightIcon size={16} />
-          </Link>
+            </Link>
+          </Button>
         </div>
         <ProductList products={products} />
       </div>
@@ -66,12 +72,16 @@ const Home = async () => {
       <div className="space-y-4 py-6">
         <div className="flex items-center justify-between px-5">
           <h2 className="font-semibold">Restaurantes Recomendados</h2>
+
           <Button
             variant="ghost"
             className="h-fit p-0 text-primary hover:bg-transparent"
+            asChild
           >
-            Ver todos
-            <ChevronRightIcon size={16} />
+            <Link href="/restaurants/recommended">
+              Ver todos
+              <ChevronRightIcon size={16} />
+            </Link>
           </Button>
         </div>
         <RestaurantList />
